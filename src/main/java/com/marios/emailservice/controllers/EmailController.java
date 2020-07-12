@@ -5,24 +5,16 @@ import com.marios.emailservice.services.EmailService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.env.Environment;
 import org.springframework.mail.MailException;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping(value = "/send-email")
 public class EmailController {
     
     @Autowired
     private EmailService emailService;
     private final Logger logger = LoggerFactory.getLogger(EmailController.class);
-    @Autowired
-    private Environment env;
-    
-    @GetMapping
-    @ResponseBody
-    public String testEntryPoint() {
-        return env.getProperty("spring.mail.username");
-    }
     
     @PostMapping
     @ResponseBody
