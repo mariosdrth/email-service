@@ -1,0 +1,10 @@
+version: '3'
+services:
+  email-api:
+    build:
+      context: server
+      dockerfile: Dockerfile
+    restart: always
+    container_name: email-api
+    ports:
+      - "8089:8089"
