@@ -9,12 +9,17 @@ import org.springframework.mail.MailException;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = "/send-email")
 public class EmailController {
     
     @Autowired
     private EmailService emailService;
     private final Logger logger = LoggerFactory.getLogger(EmailController.class);
+    
+    @GetMapping
+    @ResponseBody
+    public String testEntryPoint() {
+        return "SUCCESS";
+    }
     
     @PostMapping
     @ResponseBody
