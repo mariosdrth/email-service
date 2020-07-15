@@ -2,19 +2,19 @@ package com.marios.emailservice.model;
 
 public class Mail {
     
-    private String senderName;
-    private String senderEmail;
-    private String message;
+    private String subject;
+    private String body;
+    private String receiver;
     
-    public String getSenderName() {
-        return senderName;
+    public String getSubject() {
+        return subject;
     }
-
-    public String getSenderEmail() {
-        return senderEmail;
+    
+    public String getBody() {
+        return body;
     }
-
-    public String getMessage() {
-        return message;
+    
+    public String getReceiver() {
+        return receiver;
     }
 }
